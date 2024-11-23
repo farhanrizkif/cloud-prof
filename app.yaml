@@ -1,0 +1,11 @@
+runtime: python39  # Bisa diganti dengan runtime lain jika perlu, misalnya "nodejs16"
+
+
+handlers:
+- url: /  # Menangani semua request
+  static_files: /index.html # Direktori statis tempat file HTML dan CSS
+  upload: /index.html
+
+- url: /(.*)  # Menangani semua request
+  static_files: /\1 # Direktori statis tempat file HTML dan CSS
+  upload: /(.*)
